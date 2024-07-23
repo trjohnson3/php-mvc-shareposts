@@ -2,18 +2,9 @@
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card card-body bg-light mt-5">
-                <h2>Create an Account</h2>
-                <p>Fill out form to register</p>
+                <h2>Login</h2>
+                <p>Login with user credentials</p>
                 <form action="<?php echo URLROOT ;?>/users/register" method="post">
-                    <div class="form-group">
-                        <label for="name">Name: <sup>*</sup></label>
-                        <input type="text" name="name" class="form-control form-control-lg 
-                        <?php echo (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>"
-                        value="<?php echo $data['name']; ?>">
-                        <span class="invalid-feedback">
-                            <?php echo $data['name_err']; ?>
-                        </span>
-                    </div>
                     <div class="form-group">
                         <label for="email">Email: <sup>*</sup></label>
                         <input type="text" name="email" class="form-control form-control-lg 
@@ -32,24 +23,15 @@
                             <?php echo $data['password_err']; ?>
                         </span>
                     </div>
-                    <div class="form-group">
-                        <label for="confirm_password">Confirm Password: <sup>*</sup></label>
-                        <input type="text" name="confirm_password" class="form-control form-control-lg 
-                        <?php echo (!empty($data['confirm_password_err'])) ? 'is-invalid' : ''; ?>"
-                        value="<?php echo $data['confirm_password']; ?>">
-                        <span class="invalid-feedback">
-                            <?php echo $data['confirm_password_err']; ?>
-                        </span>
-                    </div>
 
                     <div class="row mt-3">
                         <div class="col d-flex justify-content-center align-items-center">
-                            <input type="Submit" value="Register" class="btn btn-success btn-block w-100">
+                            <input type="Submit" value="Login" class="btn btn-success btn-block w-100">
                         </div>
                         <div class="col d-flex justify-content-center align-items-center">
-                            <a href="<?php echo URLROOT . "/users/login" ?>" 
+                            <a href="<?php echo URLROOT . "/users/register" ?>" 
                             class="btn btn-light btn-block w-100">
-                                Already registered? Login
+                                No Account? Register
                             </a>
                         </div>
                     </div>
